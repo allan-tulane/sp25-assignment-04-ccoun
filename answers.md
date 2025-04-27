@@ -19,7 +19,29 @@
 - **1d.** First we substitue $|E| = |V|^{1+ϵ}$ into the total work we derived in 1c, giving $O(((|V|⋅d+|V|^{1+ϵ})log|V|)/log{d})$. We then substitute $d = |V|^{ϵ}$ back into the runtime equation, giving us $O(((|V|^{1+ϵ}+|V|^{1+ϵ})log|V|)/log|V|^{ϵ})$, which simplifies down to $O(|V|^{1+ϵ}) = O(|E|). So to achieve a running time of O(|E|), the optimal choice is $d = O(|V|^{ϵ})$.
 
 
-- **2a.**
+- **2a.** ​
+
+i/j|
+0
+1
+2
+
+0|
+0 
+-2 
+-1
+
+
+1|
+∞ 
+0 
+1
+
+2|
+∞ 
+∞ 
+0
+​
 
 
 - **2b.**
