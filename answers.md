@@ -49,7 +49,7 @@ i/j|
 
 - **2c.** Using the observations from 2b, we know that the shortest path APSP(i,j,k) that doesn't use vertex k will be APSP(i,j,k-1), and the shortest path that does use vertex k will be one that consists of the shortest path from i to k and the shortest path from k to j. So the optimal substucture will be APSP(i,j,k) = min(APSP(i,j,k−1), APSP(i,k,k−1)+APSP(k,j,k−1)).
 
-- **2d.** The work and number of subproblems would be $O(|V|^{3})$, since that is the amount of unique inputs that can be entered into APSP(i,j,k), as there are 3 variables.
+- **2d.** The work and number of subproblems would be $O(|V|^{3})$, since that is the amount of unique inputs that can be put into APSP(i,j,k), as there are 3 variables.
 
 - **2e.**
 
