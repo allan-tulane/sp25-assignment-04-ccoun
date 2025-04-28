@@ -44,7 +44,7 @@ i/j|
 ​
 
 
-- **2b.**
+- **2b.** Yes, there is a relationship between APSP(i,j,1) and APSP(i,j,2), as APSP can be expressed recursively in terms of its earlier stages of APSP(i,j,1) and APSP(i,j,0). This is because APSP(i,j,k) can be expressed as min(APSP(i,j,k−1),APSP(i,k,k−1)+APSP(k,j,k−1)), which means APSP(i,j,2) relies on whatever APSP(i,j,1) is, which itself relies on whatever APSP(i,j,0) is. This gives us APSP(i,j,2) = min(APSP(i,j,1),APSP(i,2,1)+APSP(2,j,1))
 
 
 - **2c.**
