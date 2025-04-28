@@ -21,28 +21,25 @@
 
 - **2a.** ​
 
-i/j|
-0
-1
-2
+From|To|k = 0|k = 1|k = 2
 
-0|
-0 
--2 
--1
+0 | 0 | 0 | 0 | 0
 
+0 | 1 | -2 | -2 | -2
 
-1|
-∞ 
-0 
-1
+0 | 2 | 2 | -1 | -1
 
-2|
-∞ 
-∞ 
-0
-​
+1 | 0 | -2 | -2 | -2
 
+1 | 1 | 0 | 0 | 0
+
+1 | 2 | 1 | 1 | 1
+
+2 | 0 | 2 | -1 | -1
+
+2 | 1 | 1 | 1 | 1
+
+2 | 2 | 0 | 0 | 0
 
 - **2b.** Yes, there is a relationship between APSP(i,j,1) and APSP(i,j,2), as APSP can be expressed recursively in terms of its earlier stages of APSP(i,j,1) and APSP(i,j,0). APSP(i,j,2) is at least as good as APSP(i,j,1) because more vertices are allowed, so the only improvement from APSP(i,j,1) to APSP(i,j,2) must involve vertex 2. This means APSP(i,j,2) must be either APSP(i,j,1) if vertex 2 is not used, or the sum of APSP(i,2,1) and APSP(2,j,1) if vertex 2 is used. The relationship is recursive, but each level only depends on the one before it.
 
@@ -51,7 +48,7 @@ i/j|
 
 - **2d.** The work and number of subproblems would be $O(|V|^{3})$, since that is the amount of unique inputs that can be put into APSP(i,j,k), as there are 3 variables.
 
-- **2e.**
+- **2e.** The total work for Johnson's algorithm is O(|V|⋅|E|log|V|), which means we prefer our new algorithm when $|E|= V^{2}$.
 
 
 
