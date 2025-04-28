@@ -52,7 +52,7 @@ From|To|k = 0|k = 1|k = 2
 
 
 
-- **3a.**
+- **3a.** Yes, the MST is guaranteed to be a solution to MMET because the MST always picks the minimum-weight edges necessary to connect the graph. This means it also minimizes the maximum edge weight across all possible spanning trees.
 
 
 - **3b.**
