@@ -48,7 +48,7 @@ From|To|k = 0|k = 1|k = 2
 
 - **2d.** The work and number of subproblems would be $O(|V|^{3})$, since that is the amount of unique inputs that can be put into APSP(i,j,k), as there are 3 variables.
 
-- **2e.** The total work for Johnson's algorithm is O(|V|⋅|E|log|V|), which means we prefer our new algorithm when $|E|= V^{2}$.
+- **2e.** The total work for Johnson's algorithm is O(|V|⋅|E|log|V|), which means we prefer our new algorithm when |E|= $V^{2}$.
 
 
 
