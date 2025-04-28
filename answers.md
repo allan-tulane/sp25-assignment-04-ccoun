@@ -44,10 +44,10 @@ i/j|
 ​
 
 
-- **2b.** Yes, there is a relationship between APSP(i,j,1) and APSP(i,j,2), as APSP can be expressed recursively in terms of its earlier stages of APSP(i,j,1) and APSP(i,j,0). This is because APSP(i,j,k) can be expressed as min(APSP(i,j,k−1),APSP(i,k,k−1)+APSP(k,j,k−1)), which means APSP(i,j,2) relies on whatever APSP(i,j,1) is, which itself relies on whatever APSP(i,j,0) is. This gives us APSP(i,j,2) = min(APSP(i,j,1),APSP(i,2,1)+APSP(2,j,1))
+- **2b.** Yes, there is a relationship between APSP(i,j,1) and APSP(i,j,2), as APSP can be expressed recursively in terms of its earlier stages of APSP(i,j,1) and APSP(i,j,0). APSP(i,j,2) is at least as good as APSP(i,j,1) because more vertices are allowed, so the only improvement from APSP(i,j,1) to APSP(i,j,2) must involve vertex 2. This means APSP(i,j,2) must be either APSP(i,j,1) if vertex 2 is not used, or the sum of APSP(i,2,1) and APSP(2,j,1) if vertex 2 is used. The relationship is recursive, but each level only depends on the one before it.
 
 
-- **2c.**
+- **2c.** Using the observations from 2b, we know that the shortest path APSP(i,j,k) that doesn't use vertex k will be APSP(i,j,k-1), and the shortest path that does use vertex k will be one that consists of the shortest path from i to k and the shortest path from k to j. So the optimal substucture will be APSP(i,j,k) = min(APSP(i,j,k−1), APSP(i,k,k−1)+APSP(k,j,k−1)).
 
 - **2d.**
 
