@@ -55,7 +55,6 @@ From|To|k = 0|k = 1|k = 2
 - **3a.** Yes, the MST is guaranteed to be a solution to MMET because the MST always picks the minimum-weight edges necessary to connect the graph. This means it also minimizes the maximum edge weight across all possible spanning trees.
 
 
-- **3b.**
+- **3b.** Start with the MST T, then consider all |E| possible swaps by adding a non-MST edge and removing the maximum-weight edge from the resulting cycle. Then you pick the resulting tree with the minimum total weight greater than that of T.
 
-
-- **3c.**
+- **3c.** Building the MST will take O(|E|log|V|) work, and then finding the maximum weight edge will take O(|E|⋅|V|) work, so total work for the algorithm will be O(|E|log|V|) + O(|E|⋅|V|).
